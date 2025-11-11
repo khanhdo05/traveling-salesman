@@ -101,10 +101,10 @@ vector<Edge> kruskal(vector<Vertex> &adjList, vector<Edge> &edgeList) {
 
     // Iterates through the sorted edges, from the lightest to the heaviest
     for (Edge e : edgeList) {
-        Vertex &u = adjList[e.first.label];
-        Vertex &v = adjList[e.second.label];
-        int u_label = u.label;
-        int v_label = v.label;
+        int u_label = e.first.label;
+        int v_label = e.second.label;
+        Vertex &u = adjList[u_label];
+        Vertex &v = adjList[v_label];
 
         if (find(u_label, pi) != find(v_label, pi)) {
             // Add e to the mst
