@@ -16,7 +16,15 @@
 #include "Vertex.hpp"
 
 /*
- * tsp
+ * tsp: Use DFS to traverse through the MST to find the path that minimize the time
+ *      the travelling salemans spend between different cities.
+ * 
+ * Args:
+ *      vector<Vertex> &adjList: the adjacency list that represents the graph of cities
+ *      Vertex &start: the starting city
+ * 
+ * Return:
+ *      vector<int> tour: the optimized path for the TSP
  */
 std::vector<int> tsp(std::vector<Vertex> &adjList, Vertex &start);
 
